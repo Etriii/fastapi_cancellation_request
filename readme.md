@@ -31,7 +31,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-2. Visit http://localhost:8000/long-task/ to test the long-running task. or go to documentation:
+2. Visit http://127.0.0.1:8000/api/v1/long_task/long-task/ to test the long-running task. or go to documentation:
 ```bash
 http://127.0.0.1:8000/docs
 ```
