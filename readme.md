@@ -1,42 +1,38 @@
-Install this following:
-```
-pip install fastapi uvicorn gunicorn sqlmodel psycopg2-binary httpx
+# fastapi-cancellation-task
+
+This repository demonstrates how to implement cancellation checks in a long-running task with FastAPI. The task simulates a time-consuming process and checks whether the client has disconnected during the execution.
+
+### Features:
+- Long-running task simulation (prints progress every second).
+- Checks for client disconnection to gracefully cancel the task.
+- FastAPI-powered backend.
+- Simple async cancellation logic.
+
+## Requirements
+
+To run the project, you'll need the following Python packages:
+
+- **fastapi**: For creating the API.
+- **uvicorn**: For running the app locally.
+
+```bash
+pip install fastapi uvicorn
 
 or 
 
 pip install -r requirements.txt
 ```
 
-To run migrations:
+## How to Run the Application
 
-``` generate migration
+1. Run the app
+
+```bash
+uvicorn main:app --reload
 ```
-In Windows:
-alembic revision --autogenerate -m "Migration Message"
 
-``` run migration
-alembic upgrade head
+2. Visit http://localhost:8000/long-task/ to test the long-running task. or go to documentation:
+```bash
+http://127.0.0.1:8000/docs
 ```
-In Windows:
-python -m alembic upgrade head
-
-To run seeders:
-
-windows: python -m app.migrate_fresh_and_seed  
-note: it will reset your database data
-
--------------------///OTHERS///-------------------
-python -c "import secrets; print(secrets.token_urlsafe(32))" #to generate secret keys
-
-
--------------------//////-------------------
-
-To run the app:
-```
-uvicorn app.main:app --reload
-```
-In Windows:
-python -m uvicorn app.main:app --reload
-
-
 
