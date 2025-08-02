@@ -28,7 +28,7 @@ pip install -r requirements.txt
 1. Run the app
 
 ```bash
-uvicorn main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
 2. Visit http://127.0.0.1:8000/api/v1/long_task/long-task/ to test the long-running task. or go to documentation:
