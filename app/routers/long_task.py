@@ -5,7 +5,7 @@ import asyncio
 
 router = APIRouter(tags=["LongTask"])
 
-@router.get("/long-task/")
+@router.get("/")
 async def long_task(
     check_cancel=Depends(cancellation_request.get_disconnection_checker),
 ):

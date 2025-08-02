@@ -45,5 +45,5 @@ router = APIRouter()
 
 app.include_router(router)
 app.include_router(
-    long_task.router, prefix=f"/api/{version}/long_task"
+    long_task.router, prefix=f"/api/{version}/long-task"
 )
